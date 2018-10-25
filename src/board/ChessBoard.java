@@ -3,6 +3,11 @@ package board;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import pieces.Pawn;
+import pieces.Queen;
+import pieces.King;
+import pieces.Bishop;
+import pieces.Rook;
+import pieces.Knight;
 
 public class ChessBoard extends Group {
 
@@ -29,6 +34,75 @@ public class ChessBoard extends Group {
 				if(row == 6){
 					s.addPiece(new Pawn(Color.WHITE));
 				}
+				
+				if(row == 0){
+					
+					if (col == 0 || col == 7 ) {
+						
+						s.addPiece(new Rook(Color.BLACK));
+						
+						}
+					
+					if (col == 1 || col == 6) {
+						
+						s.addPiece(new Knight(Color.BLACK));
+						
+						}
+					
+					if (col == 2 || col == 5 ) {
+						
+						s.addPiece(new Bishop(Color.BLACK));
+						
+						}
+					
+					if (col == 3 ) {
+						
+						s.addPiece(new Queen(Color.BLACK));
+						
+						}
+					
+					if (col == 4 ) {
+						
+						s.addPiece(new King(Color.BLACK));
+						
+						}
+					
+				}
+				
+				if(row == 7){
+					
+					if (col == 0 || col == 7 ) {
+						
+						s.addPiece(new Rook(Color.WHITE));
+						
+						}
+					
+					if (col == 1 || col == 6) {
+						
+						s.addPiece(new Knight(Color.WHITE));
+						
+						}
+					
+					if (col == 2 || col == 5 ) {
+						
+						s.addPiece(new Bishop(Color.WHITE));
+						
+						}
+					
+					if (col == 3 ) {
+						
+						s.addPiece(new Queen(Color.WHITE));
+						
+						}
+					
+					if (col == 4 ) {
+						
+						s.addPiece(new King(Color.WHITE));
+						
+						}
+					
+				}			
+				
 			}
 
 		}
